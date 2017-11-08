@@ -6,13 +6,11 @@ angular.module('AngularjsPresentation', [
         $routeProvider
             .when('/', {
                 controller: 'EmptyController',
-                controllerAs: 'ctrl',
                 templateUrl: 'templates/title.html'
             })
-            .when('/1', {
+            .when('/2', {
                 controller: 'EmptyController',
-                controllerAs: 'ctrl',
-                templateUrl: 'templates/title.html'
+                templateUrl: 'templates/definitions.html'
             });
 
     }

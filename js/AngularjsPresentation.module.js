@@ -18,7 +18,10 @@ angular.module('AngularjsPresentation', [
                 templateUrl: 'templates/skeleton.html'
             })
             .when('/5', {
-                templateUrl:  'templates/new-controller.html',
+                templateUrl:  'templates/new-controller.html'
+            })
+            .when('/6', {
+                templateUrl:  'templates/click-controller.html'
             });
 
     }

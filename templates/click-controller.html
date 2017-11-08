@@ -1,0 +1,17 @@
+<h1>Events &ndash; ng-click</h1>
+
+<small><code>js/controllers/Click.controller.js</code></small>
+
+<pre ng-include="'js/controllers/Click.controller.js'"></pre>
+
+Template:
+<pre ng-non-bindable>{{ ctrl.myVariable }} &lt;br&gt;
+&lt;a href=&quot;javascript:void(0)&quot; <strong>ng-click=&quot;ctrl.setGoodMorning()&quot;</strong>&gt;Morning&lt;/a&gt; |
+&lt;a href=&quot;javascript:void(0)&quot; <strong>ng-click=&quot;ctrl.myVariable = &apos;Goodbye!&apos;&quot;</strong>&gt;Bye&lt;/a&gt;</pre>
+
+Demo:
+<div ng-controller="ClickController as ctrl" class="result">
+    {{ ctrl.myVariable }} <br>
+    <a href="javascript:void(0)" ng-click="ctrl.setGoodMorning()">Morning</a> |
+    <a href="javascript:void(0)" ng-click="ctrl.myVariable = 'Goodbye!'">Bye</a>
+</div>

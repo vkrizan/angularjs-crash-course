@@ -9,12 +9,13 @@ angular.module('AngularjsPresentation', [
                 templateUrl: 'templates/title.html'
             })
             .when('/2', {
-                controller: 'EmptyController',
                 templateUrl: 'templates/definitions.html'
             })
             .when('/3', {
-                controller: 'EmptyController',
                 templateUrl: 'templates/new-app.html'
+            })
+            .when('/4', {
+                templateUrl: 'templates/skeleton.html'
             });
 
     }

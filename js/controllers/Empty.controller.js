@@ -1,4 +1,4 @@
-angular.module('angularjsPresentation').controller('EmptyController',
+angular.module('AngularjsPresentation').controller('EmptyController',
     ['$scope', function ($scope) {
         var vm = this;
 

@@ -1,10 +1,15 @@
-angular.module('angularjsPresentation', [
+angular.module('AngularjsPresentation', [
     'ngRoute',
 ]).config(function ($routeProvider) {
         'use strict';
 
         $routeProvider
             .when('/', {
+                controller: 'EmptyController',
+                controllerAs: 'ctrl',
+                templateUrl: 'templates/title.html'
+            })
+            .when('/1', {
                 controller: 'EmptyController',
                 controllerAs: 'ctrl',
                 templateUrl: 'templates/title.html'

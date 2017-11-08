@@ -1,0 +1,24 @@
+<h1>Scope + ng-class</h1>
+
+
+<ul>
+    <li>inject <code>$scope</code> into controller</li>
+    <li>use scope variables as regular symbols</li>
+</ul>
+
+<small><code>js/controllers/Scope.controller.js</code></small>
+<pre ng-include="'js/controllers/Scope.controller.js'"></pre>
+
+Template:
+<pre ng-non-bindable>&lt;span <strong>ng-class=&quot;{&apos;text-warning&apos;: legend == &apos;warning&apos;, &apos;text-danger&apos;: legend == &apos;danger&apos;}&quot;</strong>&gt;
+    Write &quot;warning&quot; or &quot;danger&quot;": <strong>{{ legend }}</strong>
+&lt;/span&gt;
+&lt;input ng-model=&quot;legend&quot;&gt;</pre>
+
+Result:
+<div ng-controller="ScopeController as ctrl" class="result">
+    <span ng-class="{'text-warning': legend == 'warning', 'text-danger': legend == 'danger'}">
+        Write "warning" or "danger": {{ legend }}
+    </span>
+    <input ng-model="legend" class="form-control">
+</div>

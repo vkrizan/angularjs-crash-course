@@ -25,6 +25,9 @@ angular.module('AngularjsPresentation', [
             })
             .when('/7', {
                 templateUrl:  'templates/models-ifs.html'
+            })
+            .when('/8', {
+                templateUrl:  'templates/scope-classes.html'
             });
 
     }

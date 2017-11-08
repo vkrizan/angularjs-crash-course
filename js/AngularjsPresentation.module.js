@@ -11,6 +11,10 @@ angular.module('AngularjsPresentation', [
             .when('/2', {
                 controller: 'EmptyController',
                 templateUrl: 'templates/definitions.html'
+            })
+            .when('/3', {
+                controller: 'EmptyController',
+                templateUrl: 'templates/new-app.html'
             });
 
     }

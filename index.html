@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularjsPresentation" class="fu">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Crash Course</title>
+
+    <link rel="stylesheet" href="css/patternfly.min.css" />
+    <link rel="stylesheet" href="css/patternfly-additions.min.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-sanitize.js"></script>
+    <script src="lib/angular-route.js"></script>
+
+    <script src="js/angularjsPresentation.module.js"></script>
+    <script src="js/controllers/Empty.controller.js"></script>
+
+</head>
+<body class="cards-pf">
+
+<div class="container full-height" ng-controller="SlidesController">
+    <div class="row-cards-pf full-height">
+        <div class="card-pf card-pf-view">
+            <div class="card-pf-body" ng-view>
+                Loading content...
+            </div>
+            <div class="card-pf-footer text-right">
+                Slide X / {{ total_slides }}
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

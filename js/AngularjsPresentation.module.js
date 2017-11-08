@@ -5,6 +5,9 @@ angular.module('AngularjsPresentation', [
 
         $routeProvider
             .when('/', {
+                redirectTo: '/1'
+            })
+            .when('/1', {
                 controller: 'EmptyController',
                 templateUrl: 'templates/title.html'
             })
@@ -31,7 +34,7 @@ angular.module('AngularjsPresentation', [
             });
 
     }
-).controller('SlidesController', ['$rootScope', '$scope', function($rootScope, $scope) {
+).controller('SlidesController', ['$rootScope', '$scope', '$location', '$timeout', '$window', function($rootScope, $scope, $location, $timeout, $window) {
     $rootScope.total_slides = 10;
 
     $scope.$on('$routeChangeSuccess', function($event, next, current) {
@@ -39,4 +42,25 @@ angular.module('AngularjsPresentation', [
             $scope.slide_num = next.$$route.originalPath.substr(1) || '1';
         }
     });
+
+    $window.onkeydown = function (event) {
+        if(event.which === 37 || event.which === 39) {
+            var currentSlide = parseInt($location.path().substr(1) || '1');
+            var newSlide;
+            if (event.which === 37) {
+                newSlide = currentSlide -1;
+            } else {
+                newSlide = currentSlide +1;
+            }
+
+            if (newSlide < 1 || newSlide > $rootScope.total_slides) {
+                return
+            }
+
+            $timeout(function () {
+                $location.path("/" + newSlide);
+            });
+        }
+    };
+
 }]);

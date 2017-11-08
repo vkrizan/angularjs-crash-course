@@ -1,0 +1,21 @@
+<h1>Models and Ifs</h1>
+
+<ul>
+    <li><code>ng-model</code> &ndash; two-way binding</li>
+    <li><code>ng-if</code> &ndash; show element in DOM based on condition</li>
+    <li><code>ng-hide</code> / <code>ng-show</code> &ndash; hide/show element visually based on condition</li>
+</ul>
+
+Template:
+<pre ng-non-bindable>&lt;label&gt;&lt;input type=&quot;checkbox&quot; <strong>ng-model=&quot;ctrl.showInput&quot;</strong>&gt; Check me!&lt;/label&gt;&lt;br&gt;
+&lt;input <strong>ng-model=&quot;ctrl.myInput&quot; ng-if=&quot;ctrl.showInput&quot;</strong> <span class="text-muted">placeholder=&quot;Write something...&quot;</span>&gt;
+&lt;span <strong>ng-show=&quot;ctrl.myInput.length &gt; 0&quot;</strong>&gt;You have written: &lt;strong&gt;{{ctrl.myInput}}&lt;/strong&gt;&lt;/span&gt;
+&lt;input <strong>ng-model=&quot;ctrl.myInput&quot; ng-show=&quot;ctrl.myInput&quot;</strong> class=&quot;form-control&quot;&gt;</pre>
+
+Demo:
+<div ng-controller="ModelIfController as ctrl" class="result">
+    <label><input type="checkbox" ng-model="ctrl.showInput"> Check me!</label><br>
+    <input ng-model="ctrl.myInput" ng-if="ctrl.showInput" placeholder="Write something..." class="form-control">
+    <span ng-show="ctrl.myInput.length > 0">You have written: <strong>{{ctrl.myInput}}</strong></span>
+    <input ng-model="ctrl.myInput" ng-show="ctrl.myInput" class="form-control">
+</div>

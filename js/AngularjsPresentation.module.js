@@ -22,6 +22,9 @@ angular.module('AngularjsPresentation', [
             })
             .when('/6', {
                 templateUrl:  'templates/click-controller.html'
+            })
+            .when('/7', {
+                templateUrl:  'templates/models-ifs.html'
             });
 
     }

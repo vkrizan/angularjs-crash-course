@@ -1,0 +1,15 @@
+<h1>New Controller</h1>
+
+<small><code>js/controllers/New.controller.js</code></small>
+
+<pre ng-include="'js/controllers/New.controller.js'"></pre>
+
+Template:
+<pre ng-non-bindable>&lt;div ng-controller=&quot;NewController as ctrl&quot;&gt;
+    {{ ctrl.myVariable }}
+&lt;/div&gt;</pre>
+
+Result:
+<div ng-controller="NewController as ctrl" class="result">
+    {{ ctrl.myVariable }}
+</div>

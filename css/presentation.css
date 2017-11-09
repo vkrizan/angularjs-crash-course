@@ -28,3 +28,11 @@ html, body {
 pre strong {
     color: #703fec;
 }
+
+.vertical-center {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

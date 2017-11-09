@@ -1,5 +1,5 @@
 angular.module('AngularjsPresentation').component('shinyShield', {
-    templateUrl: 'templates/_ShinyShield.html',
+    templateUrl: 'templates/ShinyShield.html',
     transclude: true,
     bindings: {
         name: '<'  // '=' for two-way; '&' for callback

@@ -1,0 +1,17 @@
+<h1>Components</h1>
+
+<small><code>js/components/ShinyShield.component.js</code></small>
+
+<pre ng-include="'js/components/ShinyShield.component.js'"></pre>
+
+Component Template:
+<pre ng-non-bindable>&lt;i class=&quot;fa fa-shield fa-3x&quot;&gt;&lt;/i&gt; &lt;strong&gt;<strong>{{ $ctrl.name }}</strong>&lt;/strong&gt;
+&lt;div <strong>ng-transclude</strong>&gt;&lt;/div&gt;</pre>
+
+Usage:
+<pre ng-non-bindable=""><strong>&lt;shiny-shield name=&quot;&apos;My Shield&apos;&quot;&gt;</strong>Very protective!&lt;/shiny-shield&gt;</pre>
+
+Result:
+<div class="result">
+    <shiny-shield name="'My Shield'">Very protective!</shiny-shield>
+</div>

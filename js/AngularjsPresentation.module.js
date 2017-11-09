@@ -1,5 +1,5 @@
 angular.module('AngularjsPresentation', [
-    'ngRoute',
+    'ngRoute'
 ]).config(function ($routeProvider) {
         'use strict';
 
@@ -40,11 +40,14 @@ angular.module('AngularjsPresentation', [
             })
             .when('/11', {
                 templateUrl:  'templates/filter.html'
+            })
+            .when('/12', {
+                templateUrl:  'templates/http.html'
             });
 
     }
 ).controller('SlidesController', ['$rootScope', '$scope', '$location', '$timeout', '$window', function($rootScope, $scope, $location, $timeout, $window) {
-    $rootScope.total_slides = 11;
+    $rootScope.total_slides = 12;
 
     $scope.$on('$routeChangeSuccess', function($event, next, current) {
         if (next) {

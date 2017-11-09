@@ -49,11 +49,14 @@ angular.module('AngularjsPresentation', [
             })
             .when('/14', {
                 templateUrl:  'templates/directives.html'
+            })
+            .when('/15', {
+                templateUrl:  'templates/questions.html'
             });
 
     }
 ).controller('SlidesController', ['$rootScope', '$scope', '$location', '$timeout', '$window', function($rootScope, $scope, $location, $timeout, $window) {
-    $rootScope.total_slides = 14;
+    $rootScope.total_slides = 15;
 
     $scope.$on('$routeChangeSuccess', function($event, next, current) {
         if (next) {

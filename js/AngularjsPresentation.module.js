@@ -31,6 +31,9 @@ angular.module('AngularjsPresentation', [
             })
             .when('/8', {
                 templateUrl:  'templates/scope-classes.html'
+            })
+            .when('/9', {
+                templateUrl:  'templates/repeat.html'
             });
 
     }

@@ -1,0 +1,20 @@
+<h1>Repeating</h1>
+
+Controller
+<pre ng-non-bindable>$scope.items = ['Horse', 'Cat', 'Dog', 'Mouse'];</pre>
+
+Template:
+<pre ng-non-bindable>&#x3C;ul&#x3E;
+    &#x3C;li <strong>ng-repeat=&#x22;animal in items&#x22;</strong>&#x3E;
+        <strong>{{ animal }}</strong> &#x3C;small&#x3E;(index <strong>{{ $index }}</strong>)&#x3C;/small&#x3E;
+    &#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</pre>
+
+Result:
+<div ng-controller="RepeatController as ctrl" class="result" style="font-size: 0.8em;">
+    <ul>
+        <li ng-repeat="animal in items">
+            {{ animal }} <small>(index {{ $index }})</small>
+        </li>
+    </ul>
+</div>

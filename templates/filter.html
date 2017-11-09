@@ -1,0 +1,19 @@
+<h1>Filters</h1>
+
+Template:
+<pre ng-non-bindable>&#x3C;input ng-model=&#x22;<strong>ctrl.input</strong>&#x22;&#x3E;
+&#x3C;ul&#x3E;
+    &#x3C;li ng-repeat=&#x22;place in items <strong>| filter: ctrl.input</strong> | orderBy: &#x27;city&#x27;&#x22;&#x3E;
+        &#x3C;strong&#x3E;{{ place.city }}&#x3C;/strong&#x3E; / {{ place.country }}
+    &#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</pre>
+
+Result:
+<div ng-controller="ObjectListController as ctrl" class="result" style="font-size: 0.8em;">
+    <input ng-model="ctrl.input" placeholder="Type to filter..." class="form-control">
+    <ul>
+        <li ng-repeat="place in items | filter: ctrl.input | orderBy: 'city'">
+            <strong>{{ place.city }}</strong> / {{ place.country }}
+        </li>
+    </ul>
+</div>

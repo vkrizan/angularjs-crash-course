@@ -34,6 +34,9 @@ angular.module('AngularjsPresentation', [
             })
             .when('/9', {
                 templateUrl:  'templates/repeat.html'
+            })
+            .when('/10', {
+                templateUrl:  'templates/ordering.html'
             });
 
     }

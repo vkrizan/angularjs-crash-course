@@ -1,0 +1,22 @@
+<h1>Ordering</h1>
+
+Controller
+<pre ng-non-bindable>$scope.items = [
+    {city: 'New York', country: 'USA'},
+    {city: 'Tokyo', country: 'Japan'},
+    {city: 'Brisbane', country: 'Australia'}
+];</pre>
+
+Template:
+<pre ng-non-bindable>&#x3C;li ng-repeat=&#x22;place in items <strong>| orderBy: &#x27;city&#x27;</strong>&#x22;&#x3E;
+    &#x3C;strong&#x3E;{{ place.city }}&#x3C;/strong&#x3E; / {{ place.country }}
+&#x3C;/li&#x3E;</pre>
+
+Result:
+<div ng-controller="ObjectListController as ctrl" class="result" style="font-size: 0.8em;">
+    <ul>
+        <li ng-repeat="place in items | orderBy: 'city'">
+            <strong>{{ place.city }}</strong> / {{ place.country }}
+        </li>
+    </ul>
+</div>
